@@ -3,11 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Paraíso das Fragrâncias · Menu Perfumes Árabes</title>
+<title>Paraíso das Fragrâncias · Menu Decants</title>
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
 body{margin:0;background:#EDE7DF}
 a{color:#551516}a:hover{color:#3B0D0F}
+@keyframes pfRot{0%{opacity:0;transform:translateY(8px)}4%,21%{opacity:1;transform:none}25%,100%{opacity:0;transform:translateY(-8px)}}
+.pf-rot{position:relative;height:20px;overflow:hidden;flex:1;max-width:640px}
+.pf-rot>span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:6px;opacity:0;animation:pfRot 16s infinite;white-space:nowrap}
+.pf-rot>span:nth-child(2){animation-delay:4s}.pf-rot>span:nth-child(3){animation-delay:8s}.pf-rot>span:nth-child(4){animation-delay:12s}
+@media (prefers-reduced-motion: reduce){.pf-rot>span{animation:none}.pf-rot>span:first-child{opacity:1}}
 </style>
 <style></style>
 </head>
@@ -16,7 +21,16 @@ a{color:#551516}a:hover{color:#3B0D0F}
 <template id="tpl">
 <div style="width: 100%; background: #EDE7DF; color: #2B1A19; font-family: Jost, system-ui, sans-serif; font-size: 16px; line-height: 1.5;">
 
-<div style="background: #551516; color: #F6F1EA; font-size: 13px; text-align: center; padding: 10px 24px;"><strong style="font-weight: 600;">Frete grátis</strong> nas compras acima de R$ 299</div>
+<div role="region" aria-label="Avisos da loja" style="background: #551516; color: #F6F1EA; font-size: 13px; letter-spacing: 0.04em;">
+<div style="max-width: 1280px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: center; justify-content: center;">
+<div class="pf-rot">
+<span><strong style="font-weight: 600;">Frete grátis</strong> nas compras acima de R$ 399</span>
+<span>Aproveite o cupom <strong style="font-weight: 600; letter-spacing: 0.12em;">PRIMEIRACOMPRA</strong></span>
+<span>Perfumes <strong style="font-weight: 600;">100% originais</strong>, fracionados com segurança</span>
+<span>Agora também <strong style="font-weight: 600;">cosméticos e skin care</strong></span>
+</div>
+</div>
+</div>
 
 <header style="background: #EDE7DF; border-bottom: 1px solid #D9CBBB; position: relative; z-index: 2;">
 <div style="max-width: 1280px; margin: 0 auto; padding: 20px 32px 4px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 32px;">
@@ -31,13 +45,15 @@ a{color:#551516}a:hover{color:#3B0D0F}
 </form>
 <a href="#" aria-label="Carrinho, 2 itens" style="display: flex; align-items: center; gap: 10px; padding: 8px 16px 8px 12px; border-radius: 2px; background: #551516; color: #F6F1EA; text-decoration: none; font-size: 14px; font-weight: 600;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg>R$ 89,80</a>
 </div>
-<nav aria-label="Categorias" style="max-width: 1280px; margin: 0 auto; padding: 10px 32px 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 30px; font-size: 15px; font-weight: 500;">
-<button type="button" aria-expanded="true" aria-controls="mm-arabes" style="background: transparent; border: 0; border-bottom: 2.5px solid #551516; padding: 6px 0 12px; font: inherit; font-weight: 600; color: #551516; display: flex; align-items: center; gap: 6px; cursor: pointer;">Perfumes Árabes <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"></path></svg></button>
-<a href="#" style="color: #2B1A19; text-decoration: none; padding: 6px 0 14px;">Decants</a>
-<a href="#" style="color: #2B1A19; text-decoration: none; padding: 6px 0 14px;">Perfumes Importados</a>
-<a href="#" style="color: #2B1A19; text-decoration: none; padding: 6px 0 14px;">Body Splash e Corpo</a>
-<a href="#" style="color: #2B1A19; text-decoration: none; padding: 6px 0 14px;">Presentes</a>
-<a href="#" style="color: #2B1A19; text-decoration: none; padding: 6px 0 14px;">Encontre seu perfume</a>
+<nav aria-label="Categorias" style="max-width: 1280px; margin: 0 auto; padding: 10px 32px 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 15px; font-weight: 500;">
+<button type="button" aria-expanded="true" aria-controls="mm-decants" style="background: transparent; border: 0; border-bottom: 2.5px solid #551516; padding: 6px 0 12px; font: inherit; font-weight: 600; color: #551516; display: flex; align-items: center; gap: 8px; cursor: pointer;">Decants <span style="font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; background: #551516; color: #F6F1EA; padding: 2px 8px; border-radius: 2px;">experimente</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"></path></svg></button>
+<a href="categoria.html" style="color: #2B1A19; text-decoration: none; padding: 6px 0 14px;">Perfumes Importados</a>
+<a href="#" style="color: #2B1A19; text-decoration: none; padding: 6px 0 14px;">Body Splash</a>
+<a href="#" style="color: #2B1A19; text-decoration: none; padding: 6px 0 14px;">Hidratante Corporal</a>
+<a href="#" style="color: #2B1A19; text-decoration: none; padding: 6px 0 14px;">Beleza</a>
+<a href="#" style="color: #2B1A19; text-decoration: none; padding: 6px 0 14px;">Skin Care</a>
+<a href="Main.dc.html#encontre" style="color: #2B1A19; text-decoration: none; padding: 6px 0 14px;">Encontre seu perfume</a>
+<a href="Main.dc.html#sobre" style="color: #551516; text-decoration: underline; text-underline-offset: 4px; margin-left: auto; font-size: 14px; padding: 6px 0 14px;">Sobre nós</a>
 </nav>
 </header>
 
@@ -51,16 +67,16 @@ a{color:#551516}a:hover{color:#3B0D0F}
 <div style="flex: 1; height: 300px; border-radius: 4px; background: #551516;"></div>
 </div>
 <div style="position: absolute; inset: 0; background: rgba(43, 26, 25, 0.38);"></div>
-<div id="mm-arabes" style="position: absolute; top: 0; left: 0; right: 0; background: #F6F1EA; border-bottom: 1px solid #D9CBBB; box-shadow: 0 18px 40px rgba(43, 26, 25, 0.18);">
+<div id="mm-decants" style="position: absolute; top: 0; left: 0; right: 0; background: #F6F1EA; border-bottom: 1px solid #D9CBBB; box-shadow: 0 18px 40px rgba(43, 26, 25, 0.18);">
 <div style="max-width: 1280px; margin: 0 auto; padding: 32px 32px 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px;">
 <div style="display: flex; flex-direction: column; gap: 12px;">
-<strong style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #6B5A55;">Perfumes Árabes</strong>
-<a href="categoria.html" style="font-weight: 600; text-decoration: none;">Ver todos os árabes</a>
-<a href="categoria.html" style="color: #2B1A19; text-decoration: none;">Femininos</a>
-<a href="#" style="color: #2B1A19; text-decoration: none;">Masculinos</a>
-<a href="#" style="color: #2B1A19; text-decoration: none;">Unissex</a>
+<strong style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #6B5A55;">Decants</strong>
+<a href="produto.html" style="font-weight: 600; text-decoration: none;">Ver todos os decants</a>
+<a href="produto.html" style="color: #2B1A19; text-decoration: none;">Decants femininos</a>
+<a href="#" style="color: #2B1A19; text-decoration: none;">Decants masculinos</a>
 <a href="#" style="color: #2B1A19; text-decoration: none;">Mais vendidos</a>
-<a href="#" style="color: #2B1A19; text-decoration: none;">Decants árabes</a>
+<a href="#" style="color: #2B1A19; text-decoration: none;">Novidades</a>
+<span style="font-size: 13px; color: #6B5A55; margin-top: 2px;">Em 2, 5 ou 10 ml, com o perfume original.</span>
 </div>
 <div style="display: flex; flex-direction: column; gap: 12px;">
 <strong style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #6B5A55;">Por marca</strong>
@@ -82,10 +98,10 @@ a{color:#551516}a:hover{color:#3B0D0F}
 <a href="#" style="display: flex; justify-content: space-between; gap: 12px; border-radius: 4px; background: #551516; color: #F6F1EA; text-decoration: none; padding: 24px; min-height: 200px; box-sizing: border-box;">
 <span style="display: flex; flex-direction: column; justify-content: space-between;">
 <span style="display: flex; flex-direction: column; gap: 8px;">
-<span style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #E3D3C1; font-weight: 500;">Experimente antes</span>
-<span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26.7px; line-height: 1.2; font-weight: 500;">Decants árabes a partir de R$ 34,90</span>
+<span style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #E3D3C1; font-weight: 500;">Experimente antes de investir</span>
+<span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26.7px; line-height: 1.2; font-weight: 500;">Decants a partir de R$ 33,16 no Pix</span>
 </span>
-<span style="font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 6px;">Ver decants árabes <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+<span style="font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 6px;">Ver todos os decants <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
 </span>
 <span style="flex: none; width: 112px; align-self: stretch; border-radius: 2px; overflow: hidden; position: relative; background: #E3D3C1;"><img src="img/cat_decants.webp" alt="" loading="lazy" decoding="async" width="640" height="720" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;"></span>
 </a>

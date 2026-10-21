@@ -6,9 +6,9 @@ Protótipo navegável das telas propostas para a nova loja na Nuvemshop.
 | --- | --- |
 | Home (desktop) | `index.html` |
 | Home (celular) | `celular.html` |
-| Menu aberto · Perfumes Árabes | `menu.html` |
-| Categoria · Perfumes Árabes Femininos | `categoria.html` |
-| Produto · Decant Dalal (galeria e volumes clicáveis) | `produto.html` |
+| Menu aberto · Decants | `menu.html` |
+| Categoria · Perfumes Importados Femininos | `categoria.html` |
+| Produto · Decant Dalal (galeria, volumes e compre junto clicáveis) | `produto.html` |
 
 Site estático, sem build: fotos em `img/` e fontes (Cormorant Garamond e Jost, licença OFL) em `fonts/`.
 Na Vercel, importe o repositório com o preset **Other** e deixe build e output em branco.

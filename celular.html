@@ -8,15 +8,25 @@
 <style>
 body{margin:0;background:#EDE7DF}
 a{color:#551516}a:hover{color:#3B0D0F}
+@keyframes pfRot{0%{opacity:0;transform:translateY(8px)}4%,21%{opacity:1;transform:none}25%,100%{opacity:0;transform:translateY(-8px)}}
+.pf-rot{position:relative;height:19px;overflow:hidden}
+.pf-rot>span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:5px;opacity:0;animation:pfRot 16s infinite;white-space:nowrap}
+.pf-rot>span:nth-child(2){animation-delay:4s}.pf-rot>span:nth-child(3){animation-delay:8s}.pf-rot>span:nth-child(4){animation-delay:12s}
+@media (prefers-reduced-motion: reduce){.pf-rot>span{animation:none}.pf-rot>span:first-child{opacity:1}}
 </style>
 <style>body{margin:0;background:#D9CBBB;}#root{width:390px;margin:32px auto;box-shadow:0 30px 80px rgba(43,26,25,.25);border-radius:28px;overflow:hidden;}@media (max-width:440px){#root{margin:0 auto;border-radius:0;box-shadow:none;}}</style>
 </head>
 <body>
 <div id="root"></div>
 <template id="tpl">
-<div style="width: 390px; height: 3160px; box-sizing: border-box; position: relative; overflow: hidden; background: #EDE7DF; color: #2B1A19; font-family: Jost, system-ui, sans-serif; font-size: 15px; line-height: 1.5;">
+<div style="width: 390px; box-sizing: border-box; position: relative; overflow: hidden; background: #EDE7DF; color: #2B1A19; font-family: Jost, system-ui, sans-serif; font-size: 15px; line-height: 1.5;">
 
-<div style="background: #551516; color: #F6F1EA; font-size: 12.5px; text-align: center; padding: 9px 16px;"><strong style="font-weight: 600;">5% OFF no Pix</strong> em todo o site</div>
+<div role="region" aria-label="Avisos da loja" style="background: #551516; color: #F6F1EA; font-size: 12.5px; padding: 9px 12px;"><div class="pf-rot">
+<span><strong style="font-weight: 600;">Frete grátis</strong> acima de R$ 399</span>
+<span>Aproveite o cupom <strong style="font-weight: 600; letter-spacing: 0.1em;">PRIMEIRACOMPRA</strong></span>
+<span><strong style="font-weight: 600;">100% originais</strong>, fracionados com segurança</span>
+<span>Agora também <strong style="font-weight: 600;">cosméticos e skin care</strong></span>
+</div></div>
 
 <header style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-bottom: 1px solid #D9CBBB;">
 <button type="button" aria-label="Abrir menu" style="width: 44px; height: 44px; border: 0; background: transparent; color: #2B1A19; display: flex; align-items: center; justify-content: center; cursor: pointer;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
@@ -35,51 +45,52 @@ a{color:#551516}a:hover{color:#3B0D0F}
 
 <section style="padding: 16px 16px 8px;">
 <div style="height: 280px; border-radius: 4px; background: #551516; position: relative; overflow: hidden;">
-<img src="{{img.hero}}" alt="Frascos de perfume árabe e um decant sobre pedestais, com luz de persiana" width="1200" height="900" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
-<span style="position: absolute; left: 14px; bottom: 14px; background: #F6F1EA; border-radius: 4px; padding: 8px 12px; font-size: 13px; color: #2B1A19;">Decants a partir de <strong style="color: #551516;">R$ 34,90</strong></span>
+<img src="{{img.hero}}" alt="Três decants sobre um pedestal, com frascos de perfume ao fundo" width="1200" height="900" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+<span style="position: absolute; left: 14px; bottom: 14px; background: #F6F1EA; border-radius: 4px; padding: 8px 12px; font-size: 13px; color: #2B1A19;">Decants a partir de <strong style="color: #551516;">R$ 33,16 no Pix</strong></span>
 </div>
-<p style="margin: 20px 0 8px; font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: #551516; font-weight: 500;">Perfumaria árabe original · SC</p>
-<h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 36px; line-height: 1.12; color: #551516; letter-spacing: -0.01em;">Perfumes árabes originais. Experimente no decant, <em style="font-style: italic;">apaixone-se no frasco.</em></h1>
-<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.55; color: #4A3936;">Lattafa, Armaf, Al Wataniah e French Avenue com nota fiscal.</p>
+<p style="margin: 20px 0 8px; font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: #551516; font-weight: 500;">Decants de perfumes importados</p>
+<h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 40px; line-height: 1.06; color: #551516; letter-spacing: -0.01em;">Experimente <em style="font-style: italic;">antes de investir</em> no frasco.</h1>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.55; color: #4A3936;">Perfume original, fracionado com segurança em 2, 5 ou 10 ml. Amou? Leve o frasco lacrado.</p>
 <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 18px;">
-<a href="#" style="display: flex; align-items: center; justify-content: center; height: 52px; border-radius: 2px; background: #551516; color: #F6F1EA; text-decoration: none; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">Ver perfumes árabes</a>
-<a href="#" style="display: flex; align-items: center; justify-content: center; height: 52px; border-radius: 2px; border: 1.5px solid #551516; color: #551516; text-decoration: none; box-sizing: border-box; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">Como funciona o decant</a>
+<a href="#" style="display: flex; align-items: center; justify-content: center; height: 52px; border-radius: 2px; background: #551516; color: #F6F1EA; text-decoration: none; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">Ver decants</a>
+<a href="#" style="display: flex; align-items: center; justify-content: center; height: 52px; border-radius: 2px; border: 1.5px solid #551516; color: #551516; text-decoration: none; box-sizing: border-box; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">Perfumes lacrados</a>
 </div>
 </section>
 
 <section aria-label="Por que comprar aqui" style="margin: 20px 16px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
-<div style="background: #F6F1EA; border: 1px solid #D9CBBB; border-radius: 4px; padding: 14px; display: flex; flex-direction: column; gap: 6px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#551516" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></svg><strong style="font-size: 14px; font-weight: 600;">100% originais</strong><span style="font-size: 12.5px; color: #6B5A55;">Nota fiscal e procedência</span></div>
-<div style="background: #F6F1EA; border: 1px solid #D9CBBB; border-radius: 4px; padding: 14px; display: flex; flex-direction: column; gap: 6px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#551516" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12l-8 8-9-9V4h7l10 8z"></path><circle cx="7.5" cy="7.5" r="1.5"></circle></svg><strong style="font-size: 14px; font-weight: 600;">5% OFF no Pix</strong><span style="font-size: 12.5px; color: #6B5A55;">Direto no checkout</span></div>
-<div style="background: #F6F1EA; border: 1px solid #D9CBBB; border-radius: 4px; padding: 14px; display: flex; flex-direction: column; gap: 6px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#551516" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3z"></path><path d="M14 10h4l3 3v3h-7"></path><circle cx="7" cy="18" r="1.8"></circle><circle cx="17" cy="18" r="1.8"></circle></svg><strong style="font-size: 14px; font-weight: 600;">Frete grátis</strong><span style="font-size: 12.5px; color: #6B5A55;">Acima de R$ 299</span></div>
-<div style="background: #F6F1EA; border: 1px solid #D9CBBB; border-radius: 4px; padding: 14px; display: flex; flex-direction: column; gap: 6px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#551516" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"></path><circle cx="12" cy="10" r="2.2"></circle></svg><strong style="font-size: 14px; font-weight: 600;">Envio de SC</strong><span style="font-size: 12.5px; color: #6B5A55;">Postagem em até [X] dias</span></div>
+<div style="background: #F6F1EA; border: 1px solid #D9CBBB; border-radius: 4px; padding: 14px; display: flex; flex-direction: column; gap: 6px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#551516" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></svg><strong style="font-size: 14px; font-weight: 600;">100% originais</strong><span style="font-size: 12.5px; color: #6B5A55;">Fracionados com segurança</span></div>
+<div style="background: #551516; border: 1px solid #551516; border-radius: 4px; padding: 14px; display: flex; flex-direction: column; gap: 6px; color: #F6F1EA;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F6F1EA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12l-8 8-9-9V4h7l10 8z"></path><circle cx="7.5" cy="7.5" r="1.5"></circle></svg><strong style="font-size: 14px; font-weight: 600;">5% OFF no Pix</strong><span style="font-size: 12.5px; color: #E3D3C1;">Em todo o site</span></div>
+<div style="background: #F6F1EA; border: 1px solid #D9CBBB; border-radius: 4px; padding: 14px; display: flex; flex-direction: column; gap: 6px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#551516" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3z"></path><path d="M14 10h4l3 3v3h-7"></path><circle cx="7" cy="18" r="1.8"></circle><circle cx="17" cy="18" r="1.8"></circle></svg><strong style="font-size: 14px; font-weight: 600;">Frete grátis</strong><span style="font-size: 12.5px; color: #6B5A55;">Acima de R$ 399</span></div>
+<div style="background: #F6F1EA; border: 1px solid #D9CBBB; border-radius: 4px; padding: 14px; display: flex; flex-direction: column; gap: 6px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#551516" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5l9-4.5 9 4.5-9 4.5-9-4.5z"></path><path d="M3 7.5v9l9 4.5 9-4.5v-9"></path><path d="M12 12v9"></path></svg><strong style="font-size: 14px; font-weight: 600;">Pronta entrega</strong><span style="font-size: 12.5px; color: #6B5A55;">Postagem em até 5 dias úteis</span></div>
 </section>
 
 <section style="padding: 40px 16px 8px;">
 <h2 style="margin: 0 0 16px; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 30.2px; color: #551516;">Por onde começar?</h2>
 <div style="display: flex; gap: 10px; overflow-x: auto; margin: 0 -16px; padding: 0 16px 6px;">
 <sc-for list="{{cats}}" as="c" hint-placeholder-count="6">
-<a href="#" style="flex: none; width: 142px; display: flex; flex-direction: column; gap: 8px; text-decoration: none;"><span style="display: block; aspect-ratio: 8 / 9; border-radius: 4px; overflow: hidden; background: {{c.bg}}; position: relative;"><img src="{{c.img}}" alt="" loading="lazy" decoding="async" width="640" height="720" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;"></span><span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 19px; font-weight: 500; line-height: 1.15; color: #551516;">{{c.name}}</span><span style="font-size: 12px; color: #6B5A55; margin-top: -4px;">{{c.sub}}</span></a>
+<a href="{{c.href}}" style="flex: none; width: 142px; display: flex; flex-direction: column; gap: 8px; text-decoration: none;"><span style="display: block; aspect-ratio: 8 / 9; border-radius: 4px; overflow: hidden; background: {{c.bg}}; position: relative;"><img src="{{c.img}}" alt="" loading="lazy" decoding="async" width="640" height="720" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;"></span><span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 19px; font-weight: 500; line-height: 1.15; color: #551516;">{{c.name}}</span><span style="font-size: 12px; color: #6B5A55; margin-top: -4px;">{{c.sub}}</span></a>
 </sc-for>
 </div>
 </section>
 
 <section style="padding: 40px 0 8px;">
-<div style="padding: 0 16px; display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px;">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 30.2px; color: #551516;">Os árabes mais pedidos</h2>
-<a href="#" style="font-size: 14px; font-weight: 600;">Ver todos</a>
+<div style="padding: 0 16px; display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 14px; gap: 10px;">
+<div><p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #551516; font-weight: 500;">Decants</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 30.2px; line-height: 1.1; color: #551516;">Experimente antes de investir</h2></div>
+<a href="#" style="font-size: 14px; font-weight: 600; white-space: nowrap;">Ver todos</a>
 </div>
 <div style="display: flex; gap: 12px; overflow-x: auto; padding: 0 16px 8px;">
-<sc-for list="{{arabes}}" as="p" hint-placeholder-count="4">
+<sc-for list="{{decants}}" as="p" hint-placeholder-count="4">
 <article style="flex: none; width: 196px; display: flex; flex-direction: column;">
 <a href="#" aria-label="{{p.name}}" style="display: flex; align-items: center; justify-content: center; height: 196px; border-radius: 4px; background: #F6F1EA; position: relative; overflow: hidden;">
-<sc-if value="{{p.hasBadge}}" hint-placeholder-val="{{false}}"><span style="position: absolute; z-index: 1; top: 10px; left: 10px; font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; background: #551516; color: #F6F1EA; padding: 3px 8px; border-radius: 2px;">{{p.badge}}</span></sc-if>
+<span style="position: absolute; z-index: 1; top: 10px; left: 10px; font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; background: #E3D3C1; color: #2B1A19; padding: 3px 8px; border-radius: 2px;">Decant</span>
 <img src="{{p.img}}" alt="{{p.name}}" loading="lazy" decoding="async" width="800" height="800" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
 </a>
 <span style="margin-top: 10px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #6B5A55; font-weight: 500;">{{p.brand}}</span>
 <a href="#" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18.9px; font-weight: 600; color: #2B1A19; text-decoration: none; line-height: 1.2; min-height: 2.4em;">{{p.name}}</a>
-<span style="font-size: 13px; color: #6B5A55; margin-top: 6px;">{{p.price}}</span>
-<span style="font-size: 18px; font-weight: 500; color: #551516;">{{p.pix}} <span style="font-size: 12px; font-weight: 500;">no Pix</span></span>
-<button type="button" style="margin-top: 10px; height: 44px; border-radius: 2px; border: 0; background: #551516; color: #F6F1EA; font: inherit; cursor: pointer; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">Comprar</button>
+<span style="font-size: 11.5px; color: #6B5A55; margin-top: 6px;">a partir de</span><span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 6px; margin-top: 6px;"><span style="font-size: 19px; font-weight: 500; color: #551516;">{{p.pix}}</span><span style="font-size: 9.5px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; background: #551516; color: #F6F1EA; padding: 2px 5px; border-radius: 2px;">no Pix · 5% OFF</span></span>
+<span style="font-size: 12.5px; color: #6B5A55;">ou {{p.from}} no cartão</span>
+<button type="button" style="margin-top: 10px; height: 44px; border-radius: 2px; border: 0; background: #551516; color: #F6F1EA; font: inherit; cursor: pointer; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">Escolher volume</button>
 </article>
 </sc-for>
 </div>
@@ -88,12 +99,14 @@ a{color:#551516}a:hover{color:#3B0D0F}
 <section style="margin: 32px 16px 0; padding: 22px; border-radius: 4px; background: #F6F1EA; border: 1px solid #D9CBBB;">
 <div style="aspect-ratio: 6 / 5; border-radius: 4px; background: #E3D3C1; position: relative; overflow: hidden;"><img src="{{img.trio}}" alt="Decants de 2, 5 e 10 ml lado a lado" loading="lazy" decoding="async" width="1200" height="1000" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;"><div style="position: absolute; left: 0; right: 0; bottom: 8%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));"><strong style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 21px; color: #551516; text-align: center;">2 ml</strong><strong style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 21px; color: #551516; text-align: center;">5 ml</strong><strong style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 21px; color: #551516; text-align: center;">10 ml</strong></div></div>
 <h2 style="margin: 18px 0 8px; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 27.8px; line-height: 1.15; color: #551516;">O que é decant?</h2>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A3936;">É o perfume original, fracionado direto do frasco para um frasco menor e identificado. Você testa na pele e só depois decide se leva o frasco.</p>
-<a href="#" style="margin-top: 16px; display: flex; align-items: center; justify-content: center; height: 50px; border-radius: 2px; background: #551516; color: #F6F1EA; text-decoration: none; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">Ver decants a partir de R$ 34,90</a>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A3936;">É o perfume original, fracionado com segurança do frasco para um frasco menor e identificado. Você testa na pele e só depois investe no frasco.</p>
+<a href="#" style="margin-top: 16px; display: flex; align-items: center; justify-content: center; height: 50px; border-radius: 2px; background: #551516; color: #F6F1EA; text-decoration: none; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">Decants a partir de R$ 33,16 no Pix</a>
 </section>
 
 <section style="padding: 36px 16px 8px;">
-<h2 style="margin: 0 0 14px; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 30.2px; color: #551516;">Qual é a sua vibe?</h2>
+<p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #551516; font-weight: 500;">Encontre seu perfume</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 30.2px; line-height: 1.1; color: #551516;">Escolha pelo cheiro e comece pelo decant</h2>
+<p style="margin: 8px 0 14px; font-size: 14px; color: #4A3936;">Experimente antes de investir.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 8px;">
 <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 2px; background: #F6F1EA; border: 1px solid #D9CBBB; text-decoration: none; color: #2B1A19; font-size: 14px; font-weight: 500;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #C7AA8D;"></span>Doce e cremoso</a>
 <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 2px; background: #F6F1EA; border: 1px solid #D9CBBB; text-decoration: none; color: #2B1A19; font-size: 14px; font-weight: 500;"><span style="width: 14px; height: 14px; border-radius: 50%; background: #E7A3A8;"></span>Floral</a>
@@ -103,24 +116,55 @@ a{color:#551516}a:hover{color:#3B0D0F}
 </div>
 </section>
 
+<section style="padding: 40px 0 8px;">
+<div style="padding: 0 16px; display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 14px; gap: 10px;">
+<div><p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #551516; font-weight: 500;">Perfumes lacrados</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 30.2px; line-height: 1.1; color: #551516;">Importados mais pedidos</h2></div>
+<a href="#" style="font-size: 14px; font-weight: 600; white-space: nowrap;">Ver todos</a>
+</div>
+<div style="display: flex; gap: 12px; overflow-x: auto; padding: 0 16px 8px;">
+<sc-for list="{{importados}}" as="p" hint-placeholder-count="4">
+<article style="flex: none; width: 196px; display: flex; flex-direction: column;">
+<a href="#" aria-label="{{p.name}}" style="display: flex; align-items: center; justify-content: center; height: 196px; border-radius: 4px; background: #F6F1EA; position: relative; overflow: hidden;">
+<sc-if value="{{p.hasBadge}}" hint-placeholder-val="{{false}}"><span style="position: absolute; z-index: 1; top: 10px; left: 10px; font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; background: #551516; color: #F6F1EA; padding: 3px 8px; border-radius: 2px;">{{p.badge}}</span></sc-if>
+<img src="{{p.img}}" alt="{{p.name}}" loading="lazy" decoding="async" width="800" height="800" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+</a>
+<span style="margin-top: 10px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #6B5A55; font-weight: 500;">{{p.brand}}</span>
+<a href="#" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18.9px; font-weight: 600; color: #2B1A19; text-decoration: none; line-height: 1.2; min-height: 2.4em;">{{p.name}}</a>
+<span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 6px; margin-top: 6px;"><span style="font-size: 19px; font-weight: 500; color: #551516;">{{p.pix}}</span><span style="font-size: 9.5px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; background: #551516; color: #F6F1EA; padding: 2px 5px; border-radius: 2px;">no Pix · 5% OFF</span></span>
+<span style="font-size: 12.5px; color: #6B5A55;">ou {{p.price}} no cartão</span>
+<button type="button" style="margin-top: 10px; height: 44px; border-radius: 2px; border: 0; background: #551516; color: #F6F1EA; font: inherit; cursor: pointer; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">Comprar</button>
+</article>
+</sc-for>
+</div>
+</section>
+
+<section style="margin: 36px 16px 0; padding: 22px; border-radius: 4px; background: #F6F1EA; border: 1px solid #D9CBBB; display: flex; flex-direction: column; gap: 12px;">
+<p style="margin: 0; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #551516; font-weight: 500;">Sobre nós</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 27.8px; line-height: 1.15; color: #551516;">Uma perfumaria de Camboriú para você <em style="font-style: italic;">acertar no perfume</em></h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A3936;">Perfumes importados originais, decants fracionados com segurança, body splash, hidratantes, beleza e skin care. Tudo o que está no site está em estoque.</p>
+<a href="#" style="font-size: 14px; font-weight: 600;">Conheça a nossa história</a>
+</section>
+
 <section style="margin: 32px 0 0; background: #3B0D0F; color: #F6F1EA; padding: 28px 16px;">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 27.8px;">10% OFF na primeira compra</h2>
-<p style="margin: 6px 0 14px; font-size: 14px; color: #EADFD3;">Receba o cupom, lançamentos e reposições.</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 27.8px; line-height: 1.15;">Lançamentos e reposições primeiro para você</h2>
+<p style="margin: 6px 0 14px; font-size: 14px; color: #EADFD3;">Novidades de decants, perfumes e cosméticos no seu e-mail.</p>
 <form style="display: flex; flex-direction: column; gap: 10px;">
 <label for="news-mob" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;">Seu e-mail</label>
 <input id="news-mob" type="email" placeholder="Seu melhor e-mail" style="height: 50px; border-radius: 2px; border: 0; padding: 0 18px; font: inherit; font-size: 15px; background: #F6F1EA; color: #2B1A19;">
-<button type="submit" style="height: 50px; border-radius: 2px; border: 0; background: #C7AA8D; color: #2B1A19; font: inherit; cursor: pointer; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">Quero meu cupom</button>
+<button type="submit" style="height: 50px; border-radius: 2px; border: 0; background: #C7AA8D; color: #2B1A19; font: inherit; cursor: pointer; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">Quero receber</button>
 </form>
 </section>
 
 <footer style="padding: 24px 16px 32px; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
 <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; color: #551516; font-weight: 500; letter-spacing: 0.17em; text-transform: uppercase;">Paraíso das Fragrâncias</span>
 <a href="#" style="color: #2B1A19; text-decoration: none;">WhatsApp (47) 99909-8047</a>
-<a href="#" style="color: #2B1A19; text-decoration: none;">Trocas, envio e garantia de originalidade</a>
+<span style="color: #2B1A19;"><strong style="font-weight: 600;">Atendimento:</strong> segunda a sexta, das 10h às 17h</span>
+<a href="#" style="color: #2B1A19; text-decoration: none;">Sobre nós · Trocas · Envio e prazos</a>
 <span style="font-size: 12.5px; color: #6B5A55;">© 2026 Paraíso das Fragrâncias · CNPJ [CNPJ]</span>
 </footer>
 
-<a href="#" aria-label="Falar no WhatsApp" style="position: absolute; top: 828px; right: 22px; width: 50px; height: 50px; border-radius: 50%; background: #551516; color: #F6F1EA; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(43, 26, 25, 0.3); font-weight: 500; font-size: 14px; letter-spacing: 0.15em; text-transform: uppercase;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z"></path></svg></a>
+<a href="#" aria-label="Falar no WhatsApp" style="position: absolute; top: 772px; right: 22px; width: 50px; height: 50px; box-sizing: border-box; border: 2px solid #F6F1EA; border-radius: 50%; background: #551516; color: #F6F1EA; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(43, 26, 25, 0.3); font-weight: 500; font-size: 14px; letter-spacing: 0.15em; text-transform: uppercase;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z"></path></svg></a>
 
 </div>
 </template>
@@ -221,29 +265,36 @@ a{color:#551516}a:hover{color:#3B0D0F}
 class Component extends DCLogic {
   imgs() {
     return {
-      hero: 'img/hero_m.webp', trio: 'img/decant_trio.webp',
-      cat_arabes: 'img/cat_arabes.webp', cat_decants: 'img/cat_decants.webp', cat_importados: 'img/cat_importados.webp',
-      cat_splash: 'img/cat_splash.webp', cat_presentes: 'img/cat_presentes.webp', cat_encontre: 'img/cat_encontre.webp',
-      p_atheeri: 'img/p_atheeri.webp', p_tharwah: 'img/p_tharwah.webp', p_musamam: 'img/p_musamam.webp', p_cdn: 'img/p_cdn.webp'
+      hero: 'img/hero2_m.webp', trio: 'img/decant_trio.webp',
+      cat_importados: 'img/cat_perfumes.webp', cat_decants: 'img/cat_decants.webp',
+      cat_splash: 'img/cat_splash.webp', cat_hidratante: 'img/cat_hidratante.webp', cat_skincare: 'img/cat_skincare.webp', cat_beleza: 'img/cat_beleza.webp',
+      p_atheeri: 'img/p_atheeri.webp', p_tharwah: 'img/p_tharwah.webp', p_musamam: 'img/p_musamam.webp', p_cdn: 'img/p_cdn.webp',
+      d_dalal: 'img/d_dalal.webp', d_musamam: 'img/d_musamam.webp', d_maleka: 'img/d_maleka.webp', d_supremacy: 'img/d_supremacy.webp'
     };
   }
   renderVals() {
     var I = this.imgs();
     var cats = [
-      { name: 'Perfumes Árabes', sub: 'Lattafa, Armaf e mais', bg: '#551516', line: '#551516', fg: '#F6F1EA', sfg: '#E3D3C1', img: I.cat_arabes },
-      { name: 'Decants', sub: 'A partir de R$ 34,90', bg: '#E3D3C1', line: '#E3D3C1', fg: '#551516', sfg: '#4A3936', img: I.cat_decants },
-      { name: 'Importados', sub: 'Dior, Armani e mais', bg: '#F6F1EA', line: '#D9CBBB', fg: '#551516', sfg: '#4A3936', img: I.cat_importados },
-      { name: 'Body Splash', sub: 'VS e Bath & Body Works', bg: '#F6F1EA', line: '#D9CBBB', fg: '#551516', sfg: '#4A3936', img: I.cat_splash },
-      { name: 'Presentes', sub: 'Kits e até R$ 200', bg: '#E3D3C1', line: '#E3D3C1', fg: '#551516', sfg: '#4A3936', img: I.cat_presentes },
-      { name: 'Encontre seu perfume', sub: 'Por família e ocasião', bg: '#3B0D0F', line: '#3B0D0F', fg: '#F6F1EA', sfg: '#E3D3C1', img: I.cat_encontre }
+      { name: 'Decants', sub: 'Experimente antes de investir', bg: '#E3D3C1', href: 'MegaMenu.dc.html', img: I.cat_decants },
+      { name: 'Perfumes Importados', sub: 'Lacrados, fem. e masc.', bg: '#551516', href: 'Categoria.dc.html', img: I.cat_importados },
+      { name: 'Body Splash', sub: 'Feminino e masculino', bg: '#F6F1EA', href: '#', img: I.cat_splash },
+      { name: 'Hidratante Corporal', sub: 'Feminino e masculino', bg: '#F6F1EA', href: '#', img: I.cat_hidratante },
+      { name: 'Skin Care', sub: 'Cuidados para o rosto', bg: '#E3D3C1', href: '#', img: I.cat_skincare },
+      { name: 'Beleza', sub: 'Batons, esmaltes e mais', bg: '#3B0D0F', href: '#', img: I.cat_beleza }
     ];
-    var arabes = [
-      { brand: 'Lattafa', name: 'Atheeri Eau de Parfum 100ml', price: 'R$ 490,00', pix: 'R$ 465,50', hasBadge: true, badge: 'Últimas unidades', img: I.p_atheeri },
+    var decants = [
+      { brand: 'Lattafa', name: 'Decant Dalal Eau de Parfum', from: 'R$ 34,90', pix: 'R$ 33,16', img: I.d_dalal },
+      { brand: 'Lattafa', name: 'Decant Musamam White Intense', from: 'R$ 35,00', pix: 'R$ 33,25', img: I.d_musamam },
+      { brand: 'Armaf', name: 'Decant Club de Nuit Maleka', from: 'R$ 35,90', pix: 'R$ 34,11', img: I.d_maleka },
+      { brand: 'Afnan', name: 'Decant Supremacy Eau de Parfum', from: 'R$ 35,90', pix: 'R$ 34,11', img: I.d_supremacy }
+    ];
+    var importados = [
+      { brand: 'Lattafa', name: 'Atheeri Eau de Parfum 100ml', price: 'R$ 490,00', pix: 'R$ 465,50', hasBadge: true, badge: 'Mais vendido', img: I.p_atheeri },
       { brand: 'Lattafa', name: 'Tharwah Gold Eau de Parfum 100ml', price: 'R$ 480,00', pix: 'R$ 456,00', hasBadge: false, badge: '', img: I.p_tharwah },
       { brand: 'Lattafa', name: 'Musamam White Intense 100ml', price: 'R$ 400,00', pix: 'R$ 380,00', hasBadge: false, badge: '', img: I.p_musamam },
       { brand: 'Armaf', name: 'Club de Nuit Intense Man 105ml', price: 'R$ 369,90', pix: 'R$ 351,41', hasBadge: false, badge: '', img: I.p_cdn }
     ];
-    return { img: I, cats: cats, arabes: arabes };
+    return { img: I, cats: cats, decants: decants, importados: importados };
   }
 }
 window.__mount(Component);

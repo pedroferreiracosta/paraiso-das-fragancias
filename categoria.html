@@ -3,11 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Paraíso das Fragrâncias · Perfumes Árabes Femininos</title>
+<title>Paraíso das Fragrâncias · Perfumes Importados Femininos</title>
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
 body{margin:0;background:#EDE7DF}
 a{color:#551516}a:hover{color:#3B0D0F}
+@keyframes pfRot{0%{opacity:0;transform:translateY(8px)}4%,21%{opacity:1;transform:none}25%,100%{opacity:0;transform:translateY(-8px)}}
+.pf-rot{position:relative;height:20px;overflow:hidden;flex:1;max-width:640px}
+.pf-rot>span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:6px;opacity:0;animation:pfRot 16s infinite;white-space:nowrap}
+.pf-rot>span:nth-child(2){animation-delay:4s}.pf-rot>span:nth-child(3){animation-delay:8s}.pf-rot>span:nth-child(4){animation-delay:12s}
+@media (prefers-reduced-motion: reduce){.pf-rot>span{animation:none}.pf-rot>span:first-child{opacity:1}}
 </style>
 <style></style>
 </head>
@@ -16,7 +21,16 @@ a{color:#551516}a:hover{color:#3B0D0F}
 <template id="tpl">
 <div style="width: 100%; background: #EDE7DF; color: #2B1A19; font-family: Jost, system-ui, sans-serif; font-size: 16px; line-height: 1.5;">
 
-<div style="background: #551516; color: #F6F1EA; font-size: 13px; text-align: center; padding: 10px 24px;"><strong style="font-weight: 600;">10% OFF na primeira compra</strong> com o cupom PRIMEIRACOMPRA</div>
+<div role="region" aria-label="Avisos da loja" style="background: #551516; color: #F6F1EA; font-size: 13px; letter-spacing: 0.04em;">
+<div style="max-width: 1280px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: center; justify-content: center;">
+<div class="pf-rot">
+<span><strong style="font-weight: 600;">Frete grátis</strong> nas compras acima de R$ 399</span>
+<span>Aproveite o cupom <strong style="font-weight: 600; letter-spacing: 0.12em;">PRIMEIRACOMPRA</strong></span>
+<span>Perfumes <strong style="font-weight: 600;">100% originais</strong>, fracionados com segurança</span>
+<span>Agora também <strong style="font-weight: 600;">cosméticos e skin care</strong></span>
+</div>
+</div>
+</div>
 
 <header style="background: #EDE7DF; border-bottom: 1px solid #D9CBBB;">
 <div style="max-width: 1280px; margin: 0 auto; padding: 20px 32px 4px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 32px;">
@@ -31,35 +45,38 @@ a{color:#551516}a:hover{color:#3B0D0F}
 </form>
 <a href="#" aria-label="Carrinho, 2 itens" style="display: flex; align-items: center; gap: 10px; padding: 8px 16px 8px 12px; border-radius: 2px; background: #551516; color: #F6F1EA; text-decoration: none; font-size: 14px; font-weight: 600;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg>R$ 89,80</a>
 </div>
-<nav aria-label="Categorias" style="max-width: 1280px; margin: 0 auto; padding: 14px 32px 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 30px; font-size: 15px; font-weight: 500;">
-<a href="menu.html" aria-current="page" style="color: #551516; font-weight: 600; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px;">Perfumes Árabes</a>
-<a href="#" style="color: #2B1A19; text-decoration: none;">Decants</a>
-<a href="#" style="color: #2B1A19; text-decoration: none;">Perfumes Importados</a>
-<a href="#" style="color: #2B1A19; text-decoration: none;">Body Splash e Corpo</a>
-<a href="#" style="color: #2B1A19; text-decoration: none;">Presentes</a>
-<a href="#" style="color: #2B1A19; text-decoration: none;">Encontre seu perfume</a>
+<nav aria-label="Categorias" style="max-width: 1280px; margin: 0 auto; padding: 14px 32px 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 15px; font-weight: 500;">
+<a href="menu.html" style="color: #551516; text-decoration: none; display: flex; align-items: center; gap: 8px;">Decants <span style="font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; background: #551516; color: #F6F1EA; padding: 2px 8px; border-radius: 2px;">experimente</span></a>
+<a href="categoria.html" aria-current="page" style="color: #551516; font-weight: 600; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px;">Perfumes Importados</a>
+<a href="#" style="color: #2B1A19; text-decoration: none;">Body Splash</a>
+<a href="#" style="color: #2B1A19; text-decoration: none;">Hidratante Corporal</a>
+<a href="#" style="color: #2B1A19; text-decoration: none;">Beleza</a>
+<a href="#" style="color: #2B1A19; text-decoration: none;">Skin Care</a>
+<a href="Main.dc.html#encontre" style="color: #2B1A19; text-decoration: none;">Encontre seu perfume</a>
+<a href="Main.dc.html#sobre" style="color: #551516; text-decoration: underline; text-underline-offset: 4px; margin-left: auto; font-size: 14px;">Sobre nós</a>
 </nav>
 </header>
 
 <nav aria-label="Você está em" style="max-width: 1280px; margin: 0 auto; padding: 18px 32px 0; font-size: 14px; color: #6B5A55; display: flex; flex-wrap: wrap; gap: 8px;">
-<a href="index.html" style="color: #6B5A55;">Início</a><span aria-hidden="true">/</span><a href="#" style="color: #6B5A55;">Perfumes Árabes</a><span aria-hidden="true">/</span><span style="color: #2B1A19;">Femininos</span>
+<a href="index.html" style="color: #6B5A55;">Início</a><span aria-hidden="true">/</span><a href="#" style="color: #6B5A55;">Perfumes Importados</a><span aria-hidden="true">/</span><span style="color: #2B1A19;">Femininos</span>
 </nav>
 
 <section style="max-width: 1280px; margin: 16px auto 0; padding: 0 32px;">
 <div style="border-radius: 4px; background: #551516; color: #F6F1EA; display: flex; flex-wrap: wrap; overflow: hidden;">
 <div style="flex: 1 1 520px; padding: 44px 48px; display: flex; flex-direction: column; justify-content: center; gap: 14px;">
-<h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 53.4px; line-height: 1.1; letter-spacing: -0.01em;">Perfumes Árabes Femininos</h1>
-<p style="margin: 0; font-size: 17px; color: #EADFD3; max-width: 680px;">Lattafa, Al Wataniah, Armaf e French Avenue originais, em frasco ou decant. 5% OFF no Pix.</p>
+<h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 53.4px; line-height: 1.1; letter-spacing: -0.01em;">Perfumes Importados Femininos</h1>
+<p style="margin: 0; font-size: 17px; color: #EADFD3; max-width: 680px;">Frascos lacrados e originais, a pronta entrega. Quer testar antes de investir? Comece pelo decant. <strong style="color: #F6F1EA; font-weight: 600;">5% OFF no Pix.</strong></p>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px;">
 <a href="#" aria-current="true" style="font-size: 14px; font-weight: 600; background: #F6F1EA; color: #551516; text-decoration: none; padding: 7px 16px; border-radius: 2px;">Todos</a>
+<a href="#" style="font-size: 14px; font-weight: 500; border: 1px solid #C7AA8D; color: #F6F1EA; text-decoration: none; padding: 6px 16px; border-radius: 2px;">Árabes</a>
 <a href="#" style="font-size: 14px; font-weight: 500; border: 1px solid #C7AA8D; color: #F6F1EA; text-decoration: none; padding: 6px 16px; border-radius: 2px;">Lattafa</a>
 <a href="#" style="font-size: 14px; font-weight: 500; border: 1px solid #C7AA8D; color: #F6F1EA; text-decoration: none; padding: 6px 16px; border-radius: 2px;">Al Wataniah</a>
 <a href="#" style="font-size: 14px; font-weight: 500; border: 1px solid #C7AA8D; color: #F6F1EA; text-decoration: none; padding: 6px 16px; border-radius: 2px;">Armaf</a>
 <a href="#" style="font-size: 14px; font-weight: 500; border: 1px solid #C7AA8D; color: #F6F1EA; text-decoration: none; padding: 6px 16px; border-radius: 2px;">French Avenue</a>
-<a href="#" style="font-size: 14px; font-weight: 500; border: 1px solid #C7AA8D; color: #F6F1EA; text-decoration: none; padding: 6px 16px; border-radius: 2px;">Decants árabes</a>
+<a href="menu.html" style="font-size: 14px; font-weight: 600; background: #E3D3C1; color: #2B1A19; text-decoration: none; padding: 7px 16px; border-radius: 2px;">Decants femininos</a>
 </div>
 </div>
-<div style="flex: 0 1 380px; min-height: 300px; position: relative;"><img src="{{img.cat_arabes}}" alt="Dois frascos de perfume árabe sobre fundo vinho" decoding="async" width="800" height="900" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; object-position: center 65%;"></div>
+<div style="flex: 0 1 380px; min-height: 300px; position: relative;"><img src="{{img.cat_importados}}" alt="Dois frascos de perfume importado sobre fundo vinho" decoding="async" width="800" height="900" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; object-position: center 65%;"></div>
 </div>
 </section>
 
@@ -71,13 +88,8 @@ a{color:#551516}a:hover{color:#3B0D0F}
 <button type="button" style="background: transparent; border: 0; color: #551516; font: inherit; font-size: 14px; text-decoration: underline; cursor: pointer;">Limpar</button>
 </div>
 <fieldset style="border: 0; margin: 0; padding: 18px 0; border-bottom: 1px solid #D9CBBB; display: flex; flex-direction: column; gap: 8px;">
-<legend style="font-size: 15px; font-weight: 600; padding: 0; float: left; width: 100%; margin-bottom: 6px;">Formato</legend>
-<label for="f-frasco" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-frasco" type="checkbox" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">Frasco lacrado</label>
-<label for="f-decant" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-decant" type="checkbox" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">Decant</label>
-</fieldset>
-<fieldset style="border: 0; margin: 0; padding: 18px 0; border-bottom: 1px solid #D9CBBB; display: flex; flex-direction: column; gap: 8px;">
 <legend style="font-size: 15px; font-weight: 600; padding: 0; float: left; width: 100%; margin-bottom: 6px;">Família olfativa</legend>
-<label for="f-doce" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-doce" type="checkbox" checked style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">Doce e cremoso</label>
+<label for="f-doce" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-doce" type="checkbox" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">Doce e cremoso</label>
 <label for="f-floral" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-floral" type="checkbox" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">Floral</label>
 <label for="f-madeira" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-madeira" type="checkbox" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">Amadeirado</label>
 <label for="f-fresco" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-fresco" type="checkbox" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">Fresco e cítrico</label>
@@ -97,23 +109,18 @@ a{color:#551516}a:hover{color:#3B0D0F}
 <label for="f-armaf" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-armaf" type="checkbox" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">Armaf</label>
 <label for="f-french" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-french" type="checkbox" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">French Avenue</label>
 </fieldset>
-<fieldset style="border: 0; margin: 0; padding: 18px 0; border-bottom: 1px solid #D9CBBB; display: flex; flex-direction: column; gap: 8px;">
-<legend style="font-size: 15px; font-weight: 600; padding: 0; float: left; width: 100%; margin-bottom: 6px;">Preço</legend>
-<label for="f-p1" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-p1" type="radio" name="preco" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">Até R$ 100</label>
-<label for="f-p2" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-p2" type="radio" name="preco" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">De R$ 100 a R$ 300</label>
-<label for="f-p3" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-p3" type="radio" name="preco" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">Acima de R$ 300</label>
-</fieldset>
 <fieldset style="border: 0; margin: 0; padding: 18px 0; display: flex; flex-direction: column; gap: 8px;">
-<legend style="font-size: 15px; font-weight: 600; padding: 0; float: left; width: 100%; margin-bottom: 6px;">Disponibilidade</legend>
-<label for="f-disp" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-disp" type="checkbox" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">Só disponíveis</label>
+<legend style="font-size: 15px; font-weight: 600; padding: 0; float: left; width: 100%; margin-bottom: 6px;">Preço</legend>
+<label for="f-p1" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-p1" type="radio" name="preco" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">Até R$ 300</label>
+<label for="f-p2" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-p2" type="radio" name="preco" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">De R$ 300 a R$ 450</label>
+<label for="f-p3" style="display: flex; align-items: center; gap: 10px; font-size: 14px;"><input id="f-p3" type="radio" name="preco" style="width: 18px; height: 18px; accent-color: #551516; margin: 0;">Acima de R$ 450</label>
 </fieldset>
 </aside>
 
 <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;">
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 14px; color: #6B5A55;">
-<span><strong style="color: #2B1A19; font-weight: 600;">9 produtos</strong></span>
-<button type="button" style="display: flex; align-items: center; gap: 6px; border: 1px solid #C7AA8D; background: #F6F1EA; color: #2B1A19; border-radius: 2px; padding: 4px 12px; font: inherit; font-size: 13px; cursor: pointer;">Doce e cremoso <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">remover filtro</span></button>
+<span><strong style="color: #2B1A19; font-weight: 600;">6 produtos</strong> · todos em estoque</span>
 </div>
 <div style="display: flex; align-items: center; gap: 10px; font-size: 14px;">
 <label for="ordem" style="color: #6B5A55;">Ordenar por</label>
@@ -127,53 +134,67 @@ a{color:#551516}a:hover{color:#3B0D0F}
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 28px 22px;">
-<sc-for list="{{produtos}}" as="p" hint-placeholder-count="9">
+<sc-for list="{{produtos}}" as="p" hint-placeholder-count="6">
 <article style="display: flex; flex-direction: column;">
-<a href="produto.html" aria-label="{{p.name}}" style="display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; border-radius: 4px; background: #F6F1EA; position: relative; overflow: hidden; opacity: {{p.imgOpacity}};">
-<sc-if value="{{p.hasBadge}}" hint-placeholder-val="{{false}}"><span style="position: absolute; z-index: 1; top: 14px; left: 14px; font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; background: {{p.badgeBg}}; color: {{p.badgeFg}}; padding: 4px 10px; border-radius: 2px;">{{p.badge}}</span></sc-if>
+<a href="produto.html" aria-label="{{p.name}}" style="display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; border-radius: 4px; background: #F6F1EA; position: relative; overflow: hidden;">
+<sc-if value="{{p.hasBadge}}" hint-placeholder-val="{{false}}"><span style="position: absolute; z-index: 1; top: 14px; left: 14px; font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; background: #551516; color: #F6F1EA; padding: 4px 10px; border-radius: 2px;">{{p.badge}}</span></sc-if>
 <img src="{{p.img}}" alt="{{p.name}}" loading="lazy" decoding="async" width="800" height="800" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
 </a>
 <div style="padding: 14px 4px 0; display: flex; flex-direction: column; gap: 4px; flex: 1;">
 <span style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #6B5A55; font-weight: 500;">{{p.brand}}</span>
 <a href="produto.html" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20.8px; font-weight: 600; color: #2B1A19; text-decoration: none; line-height: 1.2; min-height: 2.4em;">{{p.name}}</a>
 <span style="font-size: 13px; color: #6B5A55;">{{p.meta}}</span>
-<span style="font-size: 14px; color: #6B5A55; margin-top: 8px;">{{p.priceLine}}</span>
-<sc-if value="{{p.inStock}}" hint-placeholder-val="{{true}}">
-<span style="font-size: 21px; font-weight: 500; color: #551516; line-height: 1.2;">{{p.pix}} <span style="font-size: 13px; font-weight: 500;">no Pix</span></span>
-<span style="font-size: 13px; color: #6B5A55;">{{p.inst}}</span>
-<a href="produto.html" style="margin-top: 12px; height: 46px; border-radius: 2px; background: #551516; color: #F6F1EA; text-decoration: none; display: flex; align-items: center; justify-content: center; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">{{p.cta}}</a>
-</sc-if>
-<sc-if value="{{p.isOut}}" hint-placeholder-val="{{false}}">
-<span style="font-size: 15px; font-weight: 600; color: #6B5A55;">Esgotado no momento</span>
-<button type="button" style="margin-top: 12px; height: 46px; border-radius: 2px; border: 1.5px solid #551516; background: transparent; color: #551516; font: inherit; cursor: pointer; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">Avise-me quando chegar</button>
-</sc-if>
+<span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; margin-top: 8px;"><span style="font-size: 22px; font-weight: 500; color: #551516; line-height: 1.2;">{{p.pix}}</span><span style="font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; background: #551516; color: #F6F1EA; padding: 2px 6px; border-radius: 2px;">no Pix · 5% OFF</span></span>
+<span style="font-size: 13px; color: #6B5A55;">ou {{p.price}} no cartão</span>
+<a href="produto.html" style="margin-top: 12px; height: 46px; border-radius: 2px; background: #551516; color: #F6F1EA; text-decoration: none; display: flex; align-items: center; justify-content: center; font-weight: 500; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;">Comprar</a>
+<a href="produto.html" style="margin-top: 10px; font-size: 13.5px; font-weight: 600; text-align: center;">{{p.decant}}</a>
 </div>
 </article>
 </sc-for>
 </div>
+<section aria-labelledby="dec-cat" style="margin-top: 14px; border-radius: 4px; background: #E3D3C1; padding: 28px; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px;">
+<div><p style="margin: 0 0 4px; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #551516; font-weight: 500;">Decants femininos</p>
+<h2 id="dec-cat" style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 33.4px; line-height: 1.15; color: #551516;">Ainda em dúvida? Experimente antes de investir</h2></div>
+<a href="menu.html" style="font-size: 14px; font-weight: 600;">Ver todos os decants</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;">
+<sc-for list="{{decants}}" as="d" hint-placeholder-count="3">
+<a href="produto.html" style="display: flex; gap: 14px; align-items: center; background: #F6F1EA; border-radius: 4px; padding: 10px; text-decoration: none; color: #2B1A19;">
+<span style="flex: none; width: 84px; height: 84px; border-radius: 2px; overflow: hidden; position: relative;"><img src="{{d.img}}" alt="" loading="lazy" decoding="async" width="800" height="800" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;"></span>
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+<span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; font-weight: 600; line-height: 1.2;">{{d.name}}</span>
+<span style="font-size: 12.5px; color: #6B5A55;">2 ml a partir de</span>
+<span style="font-size: 17px; font-weight: 500; color: #551516;">{{d.pix}} <span style="font-size: 12px;">no Pix</span></span>
+</span>
+</a>
+</sc-for>
+</div>
+</section>
+
 </div>
 </div>
 
 <section style="max-width: 1280px; margin: 0 auto; padding: 72px 32px 0; display: flex; flex-wrap: wrap; gap: 48px;">
 <div style="flex: 1 1 520px; display: flex; flex-direction: column; gap: 14px;">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 37.1px; line-height: 1.15; color: #551516; letter-spacing: -0.01em;">Perfumes árabes femininos originais</h2>
-<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4A3936;">Os perfumes árabes femininos ganharam espaço porque costumam entregar concentração alta, rastro marcante e frascos de presença por um preço bem abaixo das grifes europeias. Aqui você encontra Lattafa, Al Wataniah, Armaf e French Avenue originais, todos com nota fiscal.</p>
-<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4A3936;">Não sabe por onde começar? Filtre pela família olfativa: os doces e cremosos, como o Atheeri, puxam para baunilha e âmbar; os frutados, como o Dalal, são mais leves para o dia. Ainda em dúvida, experimente no decant de 2 ml e decida depois se leva o frasco.</p>
-<p style="margin: 4px 0 0; font-size: 15px; color: #4A3936;">Veja também: <a href="#">Árabes masculinos</a> · <a href="#">Árabes unissex</a> · <a href="#">Decants árabes</a> · <a href="#">Lattafa</a></p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 37.1px; line-height: 1.15; color: #551516; letter-spacing: -0.01em;">Perfumes importados femininos originais</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4A3936;">Aqui estão os perfumes importados femininos em frasco lacrado: originais, em estoque e prontos para envio. Você encontra das casas árabes, como Lattafa, Al Wataniah e Armaf, aos extratos da French Avenue.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4A3936;">Não sabe por onde começar? Filtre pela família olfativa: os doces e cremosos, como o Atheeri, puxam para baunilha e âmbar; os florais, como o Sabah Al Ward, são mais delicados. Se ainda estiver em dúvida, experimente no decant e invista no frasco depois.</p>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A3936;">Veja também: <a href="#">Importados masculinos</a> · <a href="#">Perfumes árabes</a> · <a href="menu.html">Decants femininos</a> · <a href="#">Lattafa</a></p>
 </div>
 <div style="flex: 1 1 420px; display: flex; flex-direction: column;">
-<h2 style="margin: 0 0 12px; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 30.2px; color: #551516;">Dúvidas sobre árabes</h2>
+<h2 style="margin: 0 0 12px; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 30.2px; color: #551516;">Dúvidas frequentes</h2>
 <details open style="border-top: 1px solid #D9CBBB; padding: 16px 2px;">
-<summary style="font-family: 'Cormorant Garamond', Georgia, serif; cursor: pointer; font-size: 20px; font-weight: 600;">Perfume árabe fixa mais?</summary>
-<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #4A3936;">Muitos são Eau de Parfum ou Extrait, concentrações mais altas, e por isso costumam durar mais na pele. A fixação de cada um está na página do produto.</p>
+<summary style="font-family: 'Cormorant Garamond', Georgia, serif; cursor: pointer; font-size: 20px; font-weight: 600;">Os perfumes são originais?</summary>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #4A3936;">Sim, 100% originais. E os decants são fracionados com segurança desses mesmos frascos.</p>
 </details>
 <details style="border-top: 1px solid #D9CBBB; padding: 16px 2px;">
-<summary style="font-family: 'Cormorant Garamond', Georgia, serif; cursor: pointer; font-size: 20px; font-weight: 600;">Os Lattafa daqui são originais?</summary>
-<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #4A3936;">Sim. Todos têm nota fiscal e procedência, e os decants são fracionados desses mesmos frascos.</p>
+<summary style="font-family: 'Cormorant Garamond', Georgia, serif; cursor: pointer; font-size: 20px; font-weight: 600;">Em quanto tempo o pedido é postado?</summary>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #4A3936;">Todos os produtos do site estão em estoque, e a postagem acontece em até 5 dias úteis após a confirmação do pagamento.</p>
 </details>
 <details style="border-top: 1px solid #D9CBBB; border-bottom: 1px solid #D9CBBB; padding: 16px 2px;">
 <summary style="font-family: 'Cormorant Garamond', Georgia, serif; cursor: pointer; font-size: 20px; font-weight: 600;">Por qual começar?</summary>
-<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #4A3936;">Pegue dois decants de 2 ml de famílias diferentes, um doce e um floral, e veja qual combina com a sua pele.</p>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #4A3936;">Pegue dois decants de famílias diferentes, um doce e um floral, e veja qual combina com a sua pele antes de investir no frasco.</p>
 </details>
 </div>
 </section>
@@ -181,7 +202,7 @@ a{color:#551516}a:hover{color:#3B0D0F}
 <footer style="margin-top: 72px; border-top: 1px solid #D9CBBB;">
 <div style="max-width: 1280px; margin: 0 auto; padding: 28px 32px 36px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: #6B5A55;">
 <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; color: #551516; font-weight: 500; letter-spacing: 0.17em; text-transform: uppercase;">Paraíso das Fragrâncias</span>
-<span>WhatsApp (47) 99909-8047 · contato@paraisodasfragrancias.com.br · Camboriú, SC</span>
+<span>Atendimento de segunda a sexta, das 10h às 17h · WhatsApp (47) 99909-8047 · contato@paraisodasfragrancias.com.br · Camboriú, SC</span>
 </div>
 </footer>
 
@@ -284,33 +305,28 @@ a{color:#551516}a:hover{color:#3B0D0F}
 class Component extends DCLogic {
   imgs() {
     return {
-      cat_arabes: 'img/cat_arabes.webp', p_atheeri: 'img/p_atheeri.webp', p_tharwah: 'img/p_tharwah.webp', p_vulcan: 'img/p_vulcan.webp',
-      p_musamam: 'img/p_musamam.webp', p_ameerati: 'img/p_ameerati.webp', d_dalal: 'img/d_dalal.webp', d_atheeri: 'img/d_atheeri.webp',
-      d_maleka: 'img/d_maleka.webp', p_sabah: 'img/p_sabah.webp'
-    };
-  }
-  item(o) {
-    var out = o.out === true;
-    return {
-      brand: o.brand, name: o.name, meta: o.meta, priceLine: o.priceLine, pix: o.pix || '', inst: o.inst || '', cta: o.cta || 'Comprar',
-      hasBadge: !!o.badge, badge: o.badge || '', badgeBg: o.badgeBg || '#551516', badgeFg: o.badgeFg || '#F6F1EA',
-      inStock: !out, isOut: out, imgOpacity: out ? 0.55 : 1, img: o.img
+      cat_importados: 'img/cat_perfumes.webp', p_atheeri: 'img/p_atheeri.webp', p_tharwah: 'img/p_tharwah.webp', p_vulcan: 'img/p_vulcan.webp',
+      p_musamam: 'img/p_musamam.webp', p_ameerati: 'img/p_ameerati.webp', p_sabah: 'img/p_sabah.webp',
+      d_dalal: 'img/d_dalal.webp', d_atheeri: 'img/d_atheeri.webp', d_maleka: 'img/d_maleka.webp'
     };
   }
   renderVals() {
     var I = this.imgs();
+    var dec = 'Experimente antes no decant';
     var produtos = [
-      this.item({ brand: 'Lattafa', name: 'Atheeri Eau de Parfum 100ml', meta: 'Feminino · baunilha, flores e âmbar', priceLine: 'R$ 490,00', pix: 'R$ 465,50', inst: 'ou 3x de R$ 163,33 sem juros', badge: 'Últimas unidades', img: I.p_atheeri }),
-      this.item({ brand: 'Lattafa', name: 'Tharwah Gold Eau de Parfum 100ml', meta: 'Feminino · elegante e envolvente', priceLine: 'R$ 480,00', pix: 'R$ 456,00', inst: 'ou 3x de R$ 160,00 sem juros', img: I.p_tharwah }),
-      this.item({ brand: 'French Avenue', name: 'Vulcan Feu Extrait de Parfum 100ml', meta: 'Unissex · oriental amadeirado', priceLine: 'R$ 429,90', pix: 'R$ 408,41', inst: 'ou 3x de R$ 143,30 sem juros', img: I.p_vulcan }),
-      this.item({ brand: 'Lattafa', name: 'Musamam White Intense Eau de Parfum 100ml', meta: 'Unissex · sândalo, coco e almíscar', priceLine: 'R$ 400,00', pix: 'R$ 380,00', inst: 'ou 3x de R$ 133,33 sem juros', img: I.p_musamam }),
-      this.item({ brand: 'Al Wataniah', name: 'Ameerati Eau de Parfum 100ml', meta: 'Unissex · elegante e fresco', priceLine: 'R$ 249,90', pix: 'R$ 237,41', inst: 'ou 3x de R$ 83,30 sem juros', img: I.p_ameerati }),
-      this.item({ brand: 'Lattafa', name: 'Decant Dalal Eau de Parfum', meta: 'Feminino · frutado e caramelizado', priceLine: 'a partir de R$ 34,90 (2 ml)', pix: 'R$ 33,16', inst: '5 ml e 10 ml na página', cta: 'Escolher volume', badge: 'Decant', badgeBg: '#E3D3C1', badgeFg: '#2B1A19', img: I.d_dalal }),
-      this.item({ brand: 'Lattafa', name: 'Decant Atheeri Eau de Parfum', meta: 'Feminino · baunilha, flores e âmbar', priceLine: 'a partir de R$ 40,00 (2 ml)', pix: 'R$ 38,00', inst: '5 ml e 10 ml na página', cta: 'Escolher volume', badge: 'Decant', badgeBg: '#E3D3C1', badgeFg: '#2B1A19', img: I.d_atheeri }),
-      this.item({ brand: 'Armaf', name: 'Decant Club de Nuit Maleka', meta: 'Feminino · floral frutado', priceLine: 'a partir de R$ 35,90 (2 ml)', pix: 'R$ 34,11', inst: '5 ml e 10 ml na página', cta: 'Escolher volume', badge: 'Decant', badgeBg: '#E3D3C1', badgeFg: '#2B1A19', img: I.d_maleka }),
-      this.item({ brand: 'Al Wataniah', name: 'Sabah Al Ward Delilah Eau de Parfum 100ml', meta: 'Feminino · romântico e delicado', priceLine: 'R$ 350,00', out: true, img: I.p_sabah })
+      { brand: 'Lattafa', name: 'Atheeri Eau de Parfum 100ml', meta: 'Feminino · baunilha, flores e âmbar', price: 'R$ 490,00', pix: 'R$ 465,50', hasBadge: true, badge: 'Mais vendido', decant: 'Decant a partir de R$ 38,00 no Pix', img: I.p_atheeri },
+      { brand: 'Lattafa', name: 'Tharwah Gold Eau de Parfum 100ml', meta: 'Feminino · elegante e envolvente', price: 'R$ 480,00', pix: 'R$ 456,00', hasBadge: false, badge: '', decant: dec, img: I.p_tharwah },
+      { brand: 'French Avenue', name: 'Vulcan Feu Extrait de Parfum 100ml', meta: 'Unissex · oriental amadeirado', price: 'R$ 429,90', pix: 'R$ 408,41', hasBadge: false, badge: '', decant: dec, img: I.p_vulcan },
+      { brand: 'Lattafa', name: 'Musamam White Intense Eau de Parfum 100ml', meta: 'Unissex · sândalo, coco e almíscar', price: 'R$ 400,00', pix: 'R$ 380,00', hasBadge: false, badge: '', decant: 'Decant a partir de R$ 33,25 no Pix', img: I.p_musamam },
+      { brand: 'Al Wataniah', name: 'Sabah Al Ward Delilah Eau de Parfum 100ml', meta: 'Feminino · romântico e delicado', price: 'R$ 350,00', pix: 'R$ 332,50', hasBadge: false, badge: '', decant: dec, img: I.p_sabah },
+      { brand: 'Al Wataniah', name: 'Ameerati Eau de Parfum 100ml', meta: 'Unissex · elegante e fresco', price: 'R$ 249,90', pix: 'R$ 237,41', hasBadge: false, badge: '', decant: dec, img: I.p_ameerati }
     ];
-    return { img: I, produtos: produtos };
+    var decants = [
+      { name: 'Decant Dalal', pix: 'R$ 33,16', img: I.d_dalal },
+      { name: 'Decant Atheeri', pix: 'R$ 38,00', img: I.d_atheeri },
+      { name: 'Decant Club de Nuit Maleka', pix: 'R$ 34,11', img: I.d_maleka }
+    ];
+    return { img: I, produtos: produtos, decants: decants };
   }
 }
 window.__mount(Component);
